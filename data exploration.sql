@@ -130,7 +130,7 @@ on cd.date = cv.date and cd.location = cv.location
 
 -- Creating View to store data for later visualizations
 
-create view vaccinations_vs_people as
+create view VaccVsPop as
 select cd.date , cd.location ,cd.population, cv.people_vaccinated , 
  max(((cv.people_vaccinated/cv.population))*100) over(partition by cv.location) as vaccinations_rate
 from portfolioproject.covidvaccinations cd
