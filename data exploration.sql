@@ -52,7 +52,7 @@ order by 1 , 2;
 -- looking at countries with highest infection rate 
 select location , 
  population , 
-max(total_cases) as  total_death_count  , 
+max(total_cases) as  total_infection_count  , 
  max((total_cases/population))*100 as infection_rate
 from portfolioproject.coviddeaths
 -- where location like '%saudi%'
